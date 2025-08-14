@@ -1,8 +1,12 @@
-# Mochify driver for JSDOM
+# Mochify driver for jsdom
 
-Run tests in [JSDOM][web].
+Run tests in [jsdom][web].
+
+Use this driver with the [Mochify CLI][cli] to run Mocha tests in jsdom, a headless web browser emulator for testing. See [Mochify][mochify-docs] if you are looking for Mochify drivers for other browser testing environments.
 
 [web]: https://github.com/jsdom/jsdom
+[mochify-docs]: https://github.com/mochify-js
+[cli]: https://github.com/mochify-js/cli
 
 ## Usage
 
@@ -12,39 +16,35 @@ Install the package from npm:
 npm i @mochify/driver-jsdom -D
 ```
 
-and pass it to the CLI:
+and pass it to the [Mochify CLI][cli]:
 
 ```
 mochify --driver jsdom ...
+```
+
+Example with options passed to the driver:
+
+```
+mochify --driver jsdom \
+  --driver-option.url https://example.test \
+  --driver-option.pretendToBeVisual false
 ```
 
 ## Driver options
 
 The driver allows the following options to be set:
 
-### `stderr`
+- **`stderr`**: Defines the stream the test output will be written to. Default: `process.stderr`.
 
-Defines the stream the test output will be written to.
-Defaults to `process.stderr`
+- **`strictSSL`**: Set to `false` to disable the requirement that SSL certificates be valid. Default: `false`.
 
-### `strictSSL`
+- **`pretendToBeVisual`**: When `true`, jsdom will pretend that it is rendering and displaying content. Default: `true`.
 
-`strictSSL` can be set to false to disable the requirement that SSL certificates be valid.
-Defaults to `false`.
+- **`url`**: Run tests in the context of the given URL. Default: `http://localhost`.
 
-### `pretendToBeVisual`
+## Passing through other options to jsdom
 
-When the `pretendToBeVisual` option is set to true, jsdom will pretend that it is rendering and displaying content.
-Defaults to `true`.
-
-### `url`
-
-Run tests in the context of the given URL.
-Defaults to `http://localhost`.
-
-## Passing through other options to JSDOM
-
-In addition to the driver options documented above, `driver-hsom` allows you to pass through all of JSOM's other constructor options using the defaults as [described here][ctr-options].
-Note that it's _not_ possible to use a custom `virtualConsole` or set the `runScripts` option as the driver requires to set these itself in order to function correctly.
+In addition to the driver options documented above, `driver-jsdom` allows you to pass through all of jsdom's other constructor options, using the defaults as [described here][ctr-options].
+Note that it is not possible to use a custom `virtualConsole` or to set the `runScripts` option, because the driver needs to set these itself to function correctly.
 
 [ctr-options]: https://github.com/jsdom/jsdom#customizing-jsdom
