@@ -45,6 +45,7 @@ function mochifyDriver(options = {}) {
       // in the client script, so there's no need to duplicate them here.
       return;
     }
+    /* c8 ignore next */
     stderr.write(error.stack || String(error));
     stderr.write('\n');
   });
