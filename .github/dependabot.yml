@@ -1,6 +1,6 @@
 version: 2
 updates:
-  # Dependency updates weekly batched by semver
+  # Dependency updates monthly
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
