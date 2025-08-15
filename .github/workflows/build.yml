@@ -56,10 +56,12 @@ jobs:
       github.event.pull_request.user.login == 'dependabot[bot]'
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pull-requests: write
       issues: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v5
       - name: Automerge Dependabot PRs if all checks have passed
         shell: bash
         env:
