@@ -13,7 +13,7 @@
     "coverage:check": "c8 --reporter=text --reporter=lcov --check-coverage --branches 100 --functions 100 --lines 100 npm run test:all",
     "build": "tsc --project tsconfig.pack.json",
     "clean": "rimraf --glob '!(node_modules)/**/*.d.ts' '*.d.ts' coverage",
-    "prepack": "npm run build",
+    "prepack": "npm run clean && npm run build",
     "postpack": "npm run clean",
     "preversion": "npm run lint && npm run prettier:check && tsc && npm run coverage:check",
     "version": "changes --commits --footer",
