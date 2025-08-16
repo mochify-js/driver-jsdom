@@ -42,7 +42,7 @@
     "jsdom": "^26.1.0"
   },
   "peerDependencies": {
-    "@mochify/mochify": "^0.4.0 || ^0.5.0"
+    "@mochify/mochify": "^1.0.1"
   },
   "devDependencies": {
     "@sinonjs/referee-sinon": "^12.0.0",
