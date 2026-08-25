@@ -40,7 +40,7 @@ function mochifyDriver(options = {}) {
 
   virtual_console.on('jsdomError', (error) => {
     process.exitCode = 1;
-    if (error && error.type === 'unhandled exception') {
+    if (error && error.type === 'unhandled-exception') {
       // These errors will be logged by the global onerror handler
       // in the client script, so there's no need to duplicate them here.
       return;
