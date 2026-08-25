@@ -29,7 +29,9 @@ describe('driver_options.pretendToBeVisual', () => {
       }
       cancelAnimationFrame(frameId);
     } catch (error) {
-      throw new Error(`Failed to use requestAnimationFrame: ${error.message}`);
+      throw new Error(`Failed to use requestAnimationFrame: ${error.message}`, {
+        cause: error
+      });
     }
   });
 });
