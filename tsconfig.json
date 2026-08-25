@@ -1,6 +1,15 @@
 {
-  "extends": "@studio/tsconfig",
   "compilerOptions": {
+    "target": "es2022",
+    "lib": ["es2022"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "strict": true,
+    "noImplicitAny": false,
     "types": ["node"]
   },
   "include": ["**/*.js"],
