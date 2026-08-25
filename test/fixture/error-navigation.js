@@ -1,5 +1,4 @@
 'use strict';
-/*eslint-env mocha, browser*/
 
 describe('navigation error', () => {
   it('navigates to trigger jsdomError', () => {

@@ -1,5 +1,4 @@
 'use strict';
-/*eslint-env mocha, browser*/
 
 describe('unhandled exception', () => {
   it('schedules an unhandled exception', () => {

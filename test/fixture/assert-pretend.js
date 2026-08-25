@@ -1,5 +1,4 @@
 'use strict';
-/*eslint-env mocha, browser*/
 /*global requestAnimationFrame, cancelAnimationFrame*/
 
 describe('driver_options.pretendToBeVisual', () => {

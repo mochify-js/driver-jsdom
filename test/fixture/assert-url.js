@@ -1,5 +1,4 @@
 'use strict';
-/*eslint-env mocha, browser*/
 
 describe('driver_options.url', () => {
   it('sets window.location.href', () => {

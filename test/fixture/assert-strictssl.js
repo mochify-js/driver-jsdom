@@ -1,5 +1,4 @@
 'use strict';
-/*eslint-env mocha, browser*/
 
 describe('driver_options.strictSSL', () => {
   it('is accepted by the driver and properly configured', () => {
