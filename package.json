@@ -39,7 +39,7 @@
     "ignore": "node_modules/**"
   },
   "dependencies": {
-    "jsdom": "^30.0.1"
+    "jsdom": "^30.1.0"
   },
   "peerDependencies": {
     "@mochify/mochify": "^2.0.0"
